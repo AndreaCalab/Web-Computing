@@ -1,0 +1,54 @@
+.navbar{
+background-color: darkred;
+align-items: center;
+align-content: center;
+}
+.dropbtn {
+    background-color: darkred;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: fixed;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:tomato;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.homeHeader{
+    -webkit-text-fill-color:goldenrod;
+    
+}
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color:darkred;}
+.image{
+	background-image: url("img/annuncio.jpg");
+    backface-visibility: visible;
+}
+.imageB{
+	background-image: url("img/annuncio.jpg");
+    backface-visibility: visible;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.homeHeader h1, .homeHeader h2 {
+  margin: 10px 0;
+}
+
+
