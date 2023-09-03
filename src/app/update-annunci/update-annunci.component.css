@@ -1,0 +1,100 @@
+
+
+/* Stili per il layout dell'intestazione */
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    -webkit-text-fill-color: #007bff;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+h2{
+    margin: 0;
+    font-size: 24px;
+    background-color: #007bff;
+}
+/* Stili generici per gli elenchi */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+    background-color: black;
+    -webkit-text-fill-color: #007bff;
+}
+
+/* Stili per le sezioni degli Annunci */
+section {
+    margin-bottom: 20px;
+}
+
+/* Stili per la sezione dell'elenco degli Annunci dell'utente */
+#elenco-annunci-utente {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+#elenco-annunci-utente h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#elenco-annunci-utente li {
+    background-color: #fff;
+    padding: 10px;
+}
+
+/* Stili per la sezione per eliminare e modificare Annunci */
+#elimina-modifica-annuncio {
+    padding: 10px;
+}
+
+#elimina-modifica-annuncio h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table1{
+    width: fit-content;
+    border-collapse: collapse;
+}
+thead th {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+tbody td {
+    padding: 0px;
+}
+
+/* Stili per i pulsanti */
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+/* Stili per i form */
+input[type="text"],
+input[type="number"],
+select {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+}

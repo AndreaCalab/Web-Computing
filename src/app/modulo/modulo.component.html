@@ -1,0 +1,37 @@
+<h2>Modulo di Contatto per Acquisto Immobile</h2>
+  <form>
+    <label for="proprietario">Proprietario:</label><br>
+    <select id="proprietario">
+        <option *ngFor="let u of ut">
+            <a>{{u.nome}}</a>
+            <a>&nbsp;</a>
+            <a>{{u.cognome}}</a>
+        </option>
+    </select><br><br>
+    
+    <label for="oggetto">Oggetto:</label><br>
+    
+    <select id="immobile">
+        <option *ngFor="let i of imm">
+            <a>{{i.id}}</a>
+            <a>;</a>
+            <a>{{i.descrizione}}</a>
+            <a>;</a>
+            <a>{{i.proprietario}}</a>
+        </option>
+    </select><br><br>
+
+    
+    <label for="messaggio">Messaggio:</label><br>
+    <textarea id="messaggio" name="messaggio" required></textarea><br><br>
+
+    <label for="operazione">Operazione:</label><br>
+    <select id="operazione">
+        <option>Acquisto</option>
+        <option>Nessuna</option>
+    </select><br><br>
+
+    
+    <input type="submit" value="Invia" id="applica"  class="btn btn-primary"  (click)="inviaRichiesta()">
+  </form>
+

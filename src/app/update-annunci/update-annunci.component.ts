@@ -16,6 +16,12 @@ export class UpdateAnnunciComponent implements OnInit{
   sessionId:string="";
   immobile?:Immobile;
   categoria:string[]=[];
+  tipo:String[]=[];
+  utenti:Observable<String[]>=new Observable<String[]>;
+  admin:string="amministratore;cliente";
+  immobili_ut:Immobile[]=[];
+  imm_ut:Observable<Immobile[]>=new Observable<Immobile[]>;
+  
   constructor(
     private servizi: ServerserviceService,
     private route: ActivatedRoute
@@ -30,6 +36,7 @@ export class UpdateAnnunciComponent implements OnInit{
           this.immobili.forEach(function(elem,index,arr){
             if(elem.id===id)
             arr.splice(index,1);
+          alert("L'immobile "+id+" è stato eliminato con successo.Si prega di ricaricare la pagina");
           });
         }
       });
@@ -59,6 +66,12 @@ export class UpdateAnnunciComponent implements OnInit{
           this.imm=this.servizi.getImmobiliUtente(sessionId);
           this.imm.subscribe(imm=>this.immobili=imm);
           this.categoria=["appartamento","villa"];
+          this.utenti=this.servizi.getUtenteTipo(sessionId,this.admin);
+          this.utenti.subscribe(ut=>this.tipo=ut);
+            this.imm_ut=this.servizi.getImmobiliUtenti(sessionId);
+            this.imm_ut.subscribe(imm=>this.immobili_ut=imm);
+          
+
         }
       } );
   }

@@ -1,0 +1,103 @@
+<form>
+    <h1>Aste in corso:</h1>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Codice</th>
+                    <th>Immobile</th>
+                    <th>Offerta di Base</th>
+                    <th>Offerta attuale</th>
+                    <th>Data di scadenza</th>
+                    <th>Maggiore Offerente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of asta">
+                    <td>{{a.codice}}</td>
+                    <td>{{a.immobile}}</td>
+                    <td>{{a.offerta_di_base}}</td>
+                    <td>{{a.offerta_attuale}}</td>
+                    <td>{{a.data_di_scadenza}}</td>
+                    <td>{{a.vincitore}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Fai un'offerta:</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Codice:</th>
+                    <th>Offerta:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                    <select>
+                        <option *ngFor="let a of asta" id="codice">
+                            {{a.codice}}
+                        </option>
+                    </select>
+                </td>
+                <td><input type="number" id="offerta" placeholder="Piazza un'offerta"></td>
+                <td><input class="butt" type="submit" value="Invia" (click)="piazzaOfferta()"></td>
+                </tr>
+            </tbody>
+        </table>
+   </div>
+
+    <h1>Le mie Aste:</h1>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Codice</th>
+                    <th>Immobile</th>
+                    <th>Offerta di Base</th>
+                    <th>Offerta attuale</th>
+                    <th>Data di scadenza</th>
+                    <th>Maggiore Offerente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of astaUt">
+                    <td>{{a.codice}}</td>
+                    <td>{{a.immobile}}</td>
+                    <td>{{a.offerta_di_base}}</td>
+                    <td>{{a.offerta_attuale}}</td>
+                    <td>{{a.data_di_scadenza}}</td>
+                    <td>{{a.vincitore}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>Termina asta:</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Codice:</th>
+                    <th>Comandi:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select id="codice1">
+                            <option *ngFor="let a of astaUt">
+                                 {{a.codice}}   
+                            </option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="submit" value="Termina" (click)="terminaAsta()">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>

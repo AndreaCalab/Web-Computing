@@ -1,4 +1,5 @@
-<div *ngIf="isLogged === true">
+<form>
+<div  *ngIf="isLogged === true" class="container">
   <h2>{{title}}</h2>
   <p>
   <a routerLink="visualizzaimmobili" [queryParams]="{jsessionid: sessionId}">Visualizza Annunci</a>
@@ -10,8 +11,24 @@
     <a routerLink="updateannucio" [queryParams]="{jsessionid: sessionId}">Modifca Annunci</a>
     </p>
     <p>
+      <a routerLink="searchimmobili" [queryParams]="{jsessionid: sessionId}">Cerca Immobili</a>
+      </p>
+    <p>
       <a routerLink="enterreview" [queryParams]="{jsessionid: sessionId}">Aggiungi Recensione</a>
     </p>
+    <p>
+      <a routerLink="astaannuncio" [queryParams]="{jsessionid: sessionId}">Crea asta per annuncio</a>
+    </p>
+    <p>
+      <a routerLink="modulo" [queryParams]="{jsessionid: sessionId}">Contatta proprietario di un immobile</a>
+    </p>
+    <p>
+      <a routerLink="chatvenditore"[queryParams]="{jsessionid: sessionId}">Visualizza richieste compratori</a>
+    </p>
+    <p>
+      <a routerLink="visualizzaaste" [queryParams]="{jsessionid: sessionId}">Visualizza aste</a>
+    </p>
+    
   <div *ngIf="tipo[0]==='amministratore'">
     <h2>Impostazioni Amministratore:</h2>
     <p>
@@ -23,3 +40,4 @@
 <div *ngIf="isLogged === false">
   <p>Mi dispiace non sei autorizzato</p>
 </div>
+</form>

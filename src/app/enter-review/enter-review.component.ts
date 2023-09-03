@@ -12,6 +12,7 @@ import { Observable, sequenceEqual } from 'rxjs';
 export class EnterReviewComponent implements OnInit{
 immobili:Immobile[]=[];
 recensioni:Recensione[]=[];
+r:Recensione[]=[];
 sessionId:string="";
 recensione?:Recensione;
 rec:Observable<Recensione[]>=new Observable<Recensione[]>;
@@ -38,10 +39,11 @@ ngOnInit(): void {
       var sessionId = params['jsessionid'];
       if (sessionId != null){
         this.sessionId = sessionId;
-        var obs:Observable<Immobile[]>=this.servizi.getImmobili(sessionId);
+        var obs:Observable<Immobile[]>=this.servizi.getImmobiliUtenti(sessionId);
         obs.subscribe(imm=>this.immobili=imm);
         this.rec=this.servizi.getRecensioni(sessionId);
         this.rec.subscribe(recs=>this.recensioni=recs);
+        this.rec.subscribe(recs=>this.r=recs);
       }
     } );
 }

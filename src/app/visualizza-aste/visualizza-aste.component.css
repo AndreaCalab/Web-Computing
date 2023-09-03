@@ -1,0 +1,87 @@
+
+  
+  /* Stili per il form */
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: yellow;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: yellow;
+  }
+  
+  table {
+    width: fit-content;
+    background-color: #ccc;
+  }
+  
+  /* Stili per il primo blocco di tabelle */
+  div:nth-child(1) table {
+    margin-bottom: 20px;
+  }
+  
+  /* Stili per il secondo blocco di tabelle */
+  div:nth-child(3) table {
+    margin-bottom: 20px;
+  }
+  
+  /* Stili per le tabelle in generale */
+  table {
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Stili per il campo di input offerta */
+  input[type="number"] {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Stili per il campo di input Invia */
+  .butt {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  /* Stili per il campo di input Termina */
+  input[type="submit"] {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+

@@ -10,6 +10,7 @@
 <table class="table">
     <thead>
       <tr>
+        <th scope="col" *ngIf="tipo[0]==='amministratore'">ID</th>
         <th scope="col">Categoria</th>
         <th scope="col">Descrizione</th>
         <th scope="col">Prezzo</th>
@@ -19,8 +20,9 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let imm of immobili">
-            <td>{{imm.categoria}}</td>
+        <tr *ngFor="let imm of immobili" id="immobile">
+            <td *ngIf="tipo[0]==='amministratore'">{{imm.id}}</td>
+            <td >{{imm.categoria}}</td>
             <td>{{imm.descrizione}}</td>
             <td>{{imm.prezzo}}</td>
             <td>{{imm.posizione}}</td>
@@ -32,7 +34,7 @@
 <header>
     <h1>Recensione Immobili:</h1>
 </header>
-<table border="1">
+<table border="1" class="table">
     <thead>
         <tr>
             <th>Immobile:</th>
@@ -48,7 +50,6 @@
         </tr>
     </tbody>
 </table>
-    
 
 
 

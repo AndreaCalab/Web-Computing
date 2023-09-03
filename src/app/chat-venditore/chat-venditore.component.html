@@ -1,0 +1,61 @@
+<form>
+    <h1>Risposte alle richieste dei compratori:</h1>
+
+    <table border="4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Mittente</th>
+                <th>Oggetto</th>
+                <th>Operazione</th>
+                <th>Messaggio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of mess">
+                <td>{{m.id}}</td>
+                <td>{{m.mittente}}</td>
+                <td>{{m.oggetto}}</td>
+                <td>{{m.operazione}}</td>
+                <td>
+                  <textarea readonly="true"> {{m.messaggio}}</textarea>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <table border="4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Comando</th>
+                <th>Messaggio:</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select id="id">
+                            <option *ngFor="let m of mess" (click)="setFiltro(m)">
+                                <a>{{m.id}}</a>
+                                <a>;</a>
+                                <a>{{m.mittente}}</a>
+                            </option>
+                    </select>
+                </td>
+                    <td>
+                        <select id="comando" >
+                            <option *ngFor="let op of opzioni">{{op}}</option>
+                    </select>
+                    </td>
+                    <td>
+                        <textarea id="answer"></textarea>
+                    </td>
+                    <td>
+                        <input type="submit" value="Invia" class="btn-btn-primary" (click)="rispondi()">
+                    </td>
+                </tr>
+            </tbody>
+        
+    </table>
+</form>

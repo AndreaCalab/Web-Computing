@@ -1,0 +1,33 @@
+
+
+    <h1>Ricerca Immobili</h1>
+    
+    <form>
+        <label for="tipo">Tipo di immobile:</label>
+        <select id="tipo" name="tipo">
+            <option value="appartamento">Appartamento</option>
+            <option value="villa">Villa</option>
+        </select>
+        
+        <label for="operazione">Operazione:</label>
+        <select id="operazione" name="operazione">
+            <option value="acquisto">Acquisto</option>
+            <option value="vendita">Vendita</option>
+        </select>
+        <input type="submit" value="Cerca" (click)="filtro()">
+    </form>
+
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Descrizione</th>
+            <th>Prezzo</th>
+            <th>Proprietario</th>
+        </tr>
+        <tr *ngFor="let imm of Immobili">
+           <td>{{imm.categoria}}</td>
+           <td>{{imm.descrizione}}</td>
+           <td>{{imm.prezzo}}</td>
+           <td>{{imm.proprietario}}</td>
+        </tr>
+    </table>

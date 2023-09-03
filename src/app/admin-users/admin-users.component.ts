@@ -28,6 +28,7 @@ promoteOrBan(){
   this.parametri=username+";"+op;
   this.utente=this.servizi.promoteOrBanUsers(this.sessionId,this.parametri);
   this.utente.subscribe(ut=>this.utenti=ut);
+  alert("L'operazione è avvenuta con successo!.Ricaricare la pagina");
 }
 
 

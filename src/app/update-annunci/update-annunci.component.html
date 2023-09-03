@@ -1,9 +1,9 @@
 <header>
     <h1>Gestisci Annunci:</h1>
 </header>
-    <h2>Elenco Annunci:</h2>
-    <ol *ngFor="let imm of immobili" >
-    <li>
+    <h2>Elenco dei tuoi Annunci:</h2>
+    <ul *ngFor="let imm of immobili" >
+    <li class="select">
         <a>{{imm.id}}</a>
         <a>; </a>
         <a>{{imm.descrizione}}</a>
@@ -12,12 +12,28 @@
         <a>; Metri quadri:</a>
         <a>{{imm.metri_quadri}}</a>
         </li>
-    </ol>
-    
-    <div>
+    </ul>
+<!--Elenco annunci degli atri utenti in caso di accesso da amministratore-->
+<div *ngIf="tipo[0]==='amministratore'">
+    <h2>Elenco Annunci utenti:</h2>
+    <ul *ngFor="let imm of immobili_ut" >
+    <li class="select">
+        <a>{{imm.id}}</a>
+        <a>; </a>
+        <a>{{imm.descrizione}}</a>
+        <a>; </a>
+        <a>{{imm.posizione}}</a>
+        <a>; Metri quadri:</a>
+        <a>{{imm.metri_quadri}}</a>
+        </li>
+    </ul>
+</div>
+ 
+
+<div>
     <h1>Elimina annuncio:</h1>
     <!-- Tabella per eliminare annuncio dell'immobile -->
-    <table border="1">
+    <table border="1" class="table1">
     <thead>
     <tr>
     <th>Id:</th>
@@ -27,9 +43,16 @@
     <tr>
     <td>
     <select id="id">
+        <optgroup label="Immobili utente">
         <option *ngFor="let imm of immobili">
         {{imm.id}}
         </option>
+        </optgroup>
+        <optgroup label="Immobili utenti">
+            <option *ngFor="let imm of immobili_ut">
+                {{imm.id}}
+            </option>
+        </optgroup>
     </select>
     </td>
     <td>
@@ -60,9 +83,16 @@
     <tr>
         <td>
         <select id="id2">
+            <optgroup label="Immobili utente">
             <option *ngFor="let imm of immobili">
             <a>{{imm.id}}</a>
             </option>
+            </optgroup>
+            <optgroup label="Immobili utenti">
+                <option *ngFor="let imm of immobili_ut">
+                    {{imm.id}}
+                </option>
+            </optgroup>
         </select>
         </td>
         <td>

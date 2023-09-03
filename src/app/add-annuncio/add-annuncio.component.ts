@@ -3,6 +3,8 @@ import { Immobile, Recensione,Utente } from '../Recensione';
 import { ServerserviceService } from '../serverservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import * as fs from 'fs';
+import * as path from 'path';
 @Component({
   selector: 'app-add-annuncio',
   templateUrl: './add-annuncio.component.html',
@@ -16,6 +18,7 @@ export class AddAnnuncioComponent implements OnInit{
   immobili:Observable<Immobile[]>=new Observable<Immobile[]>;
   imm?:Immobile;
   constructor(private servizi: ServerserviceService,private route: ActivatedRoute){}
+  
   
   addAnnuncio(){
     let imm:Immobile=<Immobile>this.imm;

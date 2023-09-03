@@ -50,3 +50,42 @@ export class Utente{
         return this.cognome;
     }
 }
+
+export class Asta{
+    'immobile':string;
+    'codice':string;
+    'offerta_di_base':number;
+    'offerta_attuale':number;
+    'stato_asta':string;
+    'vincitore':string;
+    'data_di_scadenza':string;
+
+    constructor(i:string,c:string,ob:number,oa:number,sa:string,v:string,dds:string){
+        this.immobile=i;
+        this.codice=c;
+        this.offerta_di_base=ob;
+        this.offerta_attuale=oa;
+        this.stato_asta=sa;
+        this.vincitore=v;
+        this.data_di_scadenza=dds;
+    }
+}
+
+export class Messaggio{
+    'id':string;
+    'mittente':string;
+    'destinatario':string;
+    'oggetto':string;
+    'operazione':string;
+    'messaggio':string;
+
+    constructor(i:string,m:string,d:string,o:string,op:string,me:string){
+        this.id=i;
+        this.mittente=m;
+        this.destinatario=d;
+        this.oggetto=o;
+        this.operazione=op;
+        this.messaggio=me;
+    }
+}
+

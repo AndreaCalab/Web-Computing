@@ -1,0 +1,96 @@
+/*.container { 
+    max-width: 100%;
+     margin: 0 auto; 
+     padding: 0 20px; 
+    } 
+    table{
+        max-width: 100%;
+     margin: 0 auto; 
+     padding: 0 20px; 
+    }
+    @media only screen and (max-width: 600px) { 
+      .container { 
+        padding: 0 10px; 
+      } 
+      table{
+        padding:0 10px;
+      }
+    } */
+    /* Applica un reset generale ai margini e ai padding */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Imposta il box-sizing a border-box per includere i margini ed i padding nel calcolo delle dimensioni degli elementi */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Imposta un font di base e una dimensione del testo */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Stile del contenitore principale */
+
+.container {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+/* Stile del titolo */
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Stile delle etichette */
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Stile delle caselle di testo e dei select */
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Stile del pulsante di invio */
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media query per dispositivi fino a 768px di larghezza */
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}

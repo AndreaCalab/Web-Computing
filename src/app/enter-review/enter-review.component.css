@@ -1,0 +1,51 @@
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Stili per la select "immobile" */
+  .form-group select {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Stili per l'input "recensione" */
+  .form-group input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Stili per il pulsante "Inserisci" */
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Stili per il pulsante "Inserisci" quando si passa con il mouse sopra */
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Stili per il pulsante "Inserisci" quando viene premuto */
+  .btn:active {
+    background-color: #003d80;
+  }
+  
+  /* Stili per il pulsante "Inserisci" quando è disabilitato */
+  .btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }

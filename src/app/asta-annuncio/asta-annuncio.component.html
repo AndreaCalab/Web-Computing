@@ -1,0 +1,23 @@
+
+  <h1>Pubblica un'asta immobiliare</h1>
+
+  <form>
+    <label for="codice">Codice:</label><br>
+    <input type="text" id="codice" name="codice"><br><br>
+
+    <label for="descrizione">Immobile:</label><br>
+    <select id="immobile">
+      <option *ngFor="let imm of immobile">
+        <a>{{imm.descrizione}}</a>
+      </option>
+    </select><br><br>
+
+    <label for="prezzo_base">Prezzo base(€):</label><br>
+    <input type="number" id="prezzo_base" name="prezzo_base" step="0.01" value="0"><br><br>
+
+    <label for="data_scadenza">Data di scadenza:</label><br>
+    <input type="date" id="data_scadenza" name="data_scadenza"><br><br>
+
+
+    <input type="submit" value="Aggiungi" (click)="addAsta()" >
+  </form>

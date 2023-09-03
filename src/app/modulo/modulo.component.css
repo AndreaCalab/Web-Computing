@@ -1,0 +1,62 @@
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Titolo del modulo */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+  }
+  
+  /* Stile dei label */
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: blue;
+  }
+  
+  /* Stile dei select */
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Stile del messaggio textarea */
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Stile del pulsante */
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Media query per rendere il modulo responsive su dispositivi mobili */
+  @media screen and (max-width: 767px) {
+    form {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    input[type="submit"] {
+      font-size: 14px;
+    }
+  }

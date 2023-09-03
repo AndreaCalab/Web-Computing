@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ServerserviceService } from './serverservice.service';
 import { Utente } from './Recensione';
 import { Observable } from 'rxjs';
-import { isEmpty } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +18,7 @@ export class AppComponent implements OnInit{
   amministratore:string="amministratore;cliente";
 
   ngOnInit(): void {
+    //Parametri
     const urlParams = new URLSearchParams(window.location.search);
     var sessionId = urlParams.get("jsessionid");
     if (sessionId){

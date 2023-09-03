@@ -1,0 +1,53 @@
+
+form{
+    background-image: url("img/ecosostenibilita.jpg");
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h2{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+div {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  p {
+    margin-top: 0;
+  margin-bottom: 1rem;
+  }
+a{
+    -webkit-text-fill-color: blue;
+    text-decoration: none;
+    
+}
+/* Stili per il layout responsive */
+@media (max-width: 600px) {
+  form {
+    padding: 5px;
+  }
+}
+
+@media (min-width: 400px) {
+  form {
+    padding: 0px;
+  }
+}
+
+/* Stili specifici per il controllo della visibilità degli elementi */
+[hidden] {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
